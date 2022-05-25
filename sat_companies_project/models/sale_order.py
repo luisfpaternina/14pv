@@ -70,9 +70,10 @@ class SaleOrder(models.Model):
             else:
                 record.action_confirm()
 
+
     def action_confirm(self):
         state_no_sale = False
-        if self.state not in ['sale']:
+        if self.state in ['sent']:
             state_no_sale = True
         res = super(SaleOrder, self).action_confirm()
         for record in self:
@@ -114,9 +115,10 @@ class SaleOrder(models.Model):
                             
                             task.write(task_value)
                             task_names = [x.name for x in project_fsm.task_ids]
-                            if task.name not in task_names:
+                            task_name = record.name +' - '+task.name
+                            if task_name not in task_names:
                                 self.env['project.task'].create({
-                                    'name': task.name,
+                                    'name': record.name +' - '+task.name,
                                     'partner_id': record.partner_id.id,
                                     'ot_type_id': record.sale_type_id.id,
                                     'gadgest_contract_type_id': record.gadgets_contract_type_id.id,

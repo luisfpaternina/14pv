@@ -62,9 +62,10 @@ class WizardSaleOrderType(models.TransientModel):
                         
                         task.write(task_value)
                         task_names = [x.name for x in project_fsm.task_ids]
-                        if task.name not in task_names:
+                        task_name = record.sale_order_id.name +' - '+task.name
+                        if task_name not in task_names:
                             self.env['project.task'].create({
-                                'name': task.name,
+                                'name': record.sale_order_id.name +' - '+task.name,
                                 'partner_id': record.sale_order_id.partner_id.id,
                                 'ot_type_id': record.sale_order_id.sale_type_id.id,
                                 'gadgest_contract_type_id': record.sale_order_id.gadgets_contract_type_id.id,
