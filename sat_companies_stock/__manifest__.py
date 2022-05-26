@@ -16,6 +16,7 @@
         'sale_management',
         'account',
         'project',
+        'product',
         'stock',
         'purchase',
         'contacts',

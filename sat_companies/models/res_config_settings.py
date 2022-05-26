@@ -34,6 +34,11 @@ class ResConfigSettings(models.TransientModel):
         string="Sale revision history")
     module_pc_stock_picking_ext = fields.Boolean(
         string="pc stock picking ext")
+    has_rae = fields.Boolean(
+        string="Has RAE",
+        related="company_id.has_rae",
+        readonly=False,
+        config_parameter='sat_companies.has_rae')
     
 
     def set_values(self):
@@ -41,4 +46,5 @@ class ResConfigSettings(models.TransientModel):
         self.env['ir.config_parameter'].sudo().set_param('charge', self.charge)
         self.env['ir.config_parameter'].sudo().set_param('show_technical', self.show_technical)
         self.env['ir.config_parameter'].sudo().set_param('is_potencial_client', self.is_potencial_client)
+        self.env['ir.config_parameter'].sudo().set_param('has_rae', self.has_rae)
         return res

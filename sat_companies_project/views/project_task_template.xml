@@ -42,7 +42,7 @@
                                 <field name="task_ids" widget="many2many_tags"/>
                             </group>
                             <group>
-                                
+                                <field name="active"/>
                             </group>
                         </group>
                     </sheet>

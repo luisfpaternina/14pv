@@ -9,4 +9,6 @@ class ResCompany(models.Model):
         string="Enable technical")
     is_potencial_client = fields.Boolean(
         string="Is potencial client")
+    has_rae = fields.Boolean(
+        string="Has RAE")
     

@@ -74,7 +74,15 @@
                                     <div class="text-muted">This option enable QR scanner from gadget</div>
                                     <field name="module_sat_companies_product_qr"/>
                                 </div>
-                            </div> 
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="RAE" for="module_sat_companies_product_qr"/>
+                                    <div class="text-muted">This option enable required RAE</div>
+                                    <field name="has_rae"/>
+                                </div>
+                            </div>  
                         </div>
                         <h2>Purchases</h2>
                         <div class="row mt16 o_settings_container">

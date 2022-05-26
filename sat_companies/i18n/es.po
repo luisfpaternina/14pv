@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-12 17:50+0000\n"
-"PO-Revision-Date: 2022-05-12 17:50+0000\n"
+"POT-Creation-Date: 2022-05-25 21:08+0000\n"
+"PO-Revision-Date: 2022-05-25 21:08+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -173,11 +173,6 @@ msgid "BIM project"
 msgstr "Obras/BIM"
 
 #. module: sat_companies
-#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
-msgid "BIM with SAT"
-msgstr "Obras/SAT"
-
-#. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
 msgid "Base exenta"
 msgstr ""
@@ -275,6 +270,11 @@ msgstr "Documentos"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable Transfer request"
+msgstr "Habilitar solicitud de transferencias"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "Enable purchases"
 msgstr "Compras"
 
@@ -335,6 +335,12 @@ msgid "Gadgets"
 msgstr "Aparatos"
 
 #. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__has_rae
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__has_rae
+msgid "Has RAE"
+msgstr "Habilitar RAE"
+
+#. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
 msgid "I.V.A"
 msgstr ""
@@ -370,6 +376,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__in_payment
 msgid "In Payment"
 msgstr "En proceso de pago"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Integrate BIM with SAT"
+msgstr ""
 
 #. module: sat_companies
 #: model:ir.model.fields.selection,name:sat_companies.selection__account_move__payment_state__invoicing_legacy
@@ -604,6 +615,11 @@ msgid "Quality alerts"
 msgstr "Alertas de calidad"
 
 #. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "RAE"
+msgstr ""
+
+#. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
 msgid "Recargo"
 msgstr ""
@@ -687,9 +703,24 @@ msgid "This option enable QR scanner from gadget"
 msgstr "Esta opción habilita los código QR de aparatos"
 
 #. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "This option enable required RAE"
+msgstr "Campo RAE obligatorio cuando el producto es un aparato"
+
+#. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
 msgid "Total factura"
 msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Transfer request"
+msgstr "Solicitud de transferencias"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Transfer request for technicians"
+msgstr "Solicitud de transferencias para técnicos"
 
 #. module: sat_companies
 #: model:ir.model,name:sat_companies.model_account_move_unpaid
@@ -738,21 +769,26 @@ msgstr ""
 #: code:addons/sat_companies/models/res_partner.py:0
 #, python-format
 msgid "You must register a Bank account"
-msgstr "Se debe registrar al menos 1 cuenta bancaría!"
+msgstr ""
 
 #. module: sat_companies
 #: code:addons/sat_companies/models/res_partner.py:0
 #, python-format
 msgid "You must register a city"
-msgstr "El campo ciudad es obligatorio"
+msgstr ""
 
 #. module: sat_companies
 #: code:addons/sat_companies/models/res_partner.py:0
 #, python-format
 msgid "You must register an identification number"
-msgstr "El campo número de identificación es obligatorio"
+msgstr ""
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "charge"
 msgstr "Cambio"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_pc_stock_picking_ext
+msgid "pc stock picking ext"
+msgstr ""

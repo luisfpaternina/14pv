@@ -80,7 +80,7 @@ class ResPartner(models.Model):
         tracking=True)
     user_partner_contact_id = fields.Many2one(
         'res.users',
-        string="C.Mantenimiento",
+        string="Comercial mantenimiento",
         tracking=True)
     is_potential_client = fields.Boolean(
         string="Is a potential client",

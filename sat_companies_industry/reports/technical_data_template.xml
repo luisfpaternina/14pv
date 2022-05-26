@@ -73,9 +73,9 @@
                                         <strong><span>Modelo aparato:</span></strong><span> </span><span t-field="o.product_id.gadget_model"></span><br></br>
                                         <strong><span>Fabricante:</span></strong><span> </span><span t-field="o.product_id.partner_maker_id"></span><br></br>
                                         <strong><span>Grupo tractor:</span></strong><span> </span><span t-field="o.product_id.tractor_group"></span><br></br>
-                                        <strong><span>Bancada:</span></strong><span> </span><span t-field="o.product_id.bench"></span><br></br>
+                                        <strong><span>Bancada:</span></strong><span> </span><span ></span><br></br>
                                         <strong><span>Potencia motor(KW):</span></strong><span> </span><span t-field="o.product_id.motor_power"></span><br></br>
-                                        <strong><span>Freno motor(V):</span></strong><span> </span><span t-field="o.product_id.motor_brake"></span><br></br>
+                                        <strong><span>Freno motor(V):</span></strong><span> </span><span ></span><br></br>
                                         <strong><span>N° paradas:</span></strong><span> </span><span t-field="o.product_id.number_stops"></span><br></br>
                                         <strong><span>N° personas:</span></strong><span> </span><span t-field="o.product_id.numer_people"></span><br></br>
                                         <strong><span>Carga(kgs):</span></strong><span> </span><span t-field="o.product_id.load"></span><br></br>

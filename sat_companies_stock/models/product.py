@@ -461,13 +461,24 @@ class ProductTemplate(models.Model):
         string="Gadget high date")
     gadget_low_date = fields.Date(
         string="Gadget low date")
+    has_rae = fields.Boolean(
+        string="Has RAE",
+        compute="compute_rae")
     
+    @api.depends('is_gadget')
+    def compute_rae(self):
+        if self.is_gadget:
+            has_rae = self.env['ir.config_parameter'].sudo().get_param('sat_companies.has_rae') or False
+            self.has_rae = has_rae
+        else:
+            self.has_rae = False
 
     @api.onchange('is_gadget')
     def _onchange_is_gadget(self):
         for record in self:
             if record.is_gadget == True:
                 record.type = 'service'
+                record.purchase_ok = False
 
     @api.onchange('partner_id')
     def _onchange_partner_admin_id(self):
@@ -476,14 +487,12 @@ class ProductTemplate(models.Model):
         else:
             self.is_community = False
 
-
     @api.onchange('partner_id')
     def _onchange_partner_id(self):
         if self.partner_id:
             self.partner_type_id = self.partner_id.partner_type_id
         else:
             self.partner_type_id = False
-
 
     @api.depends('gadget_low_date')
     def _validate_low_date(self):
@@ -496,7 +505,6 @@ class ProductTemplate(models.Model):
             else:
                 record.is_validate_date = False
 
-
     @api.onchange('gadget_low_date','is_validate_date')
     def _active_product(self):
         for record in self:
@@ -507,7 +515,6 @@ class ProductTemplate(models.Model):
                 record.active = True
                 record.active_name = 'ALTA'
 
-    
     def _generate_qr_code(self):
         for record in self:
             if record.is_gadget == True:
@@ -527,7 +534,6 @@ class ProductTemplate(models.Model):
                 record.qr_cabine_image = False
                 record.qr_machine = False
                 record.qr_machine_image = False
-
 
     @api.onchange('gadget_model')
     def _upper_gadget_model(self):        

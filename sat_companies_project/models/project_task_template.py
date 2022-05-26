@@ -13,3 +13,13 @@ class ProjectTaskTemplate(models.Model):
     task_ids = fields.Many2many(
         'project.task',
         string="Tasks")
+    active = fields.Boolean(
+        string="Active",
+        tracking=True,
+        default=True)
+
+
+    @api.onchange('name')
+    def _upper_name(self):
+    # COLOCAR CAMPO NAME EN MAYUSCULAS     
+        self.name = self.name.upper() if self.name else False
