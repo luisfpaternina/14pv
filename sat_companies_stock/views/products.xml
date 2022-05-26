@@ -297,6 +297,7 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
 
+            <!--AGREGAR NUEVO CAMPO DE TIPO BOOLEAN-->
             <xpath expr="//form/sheet/div[2]/div[1]/div[2]" position="after">
                 <div>
                     <field name="is_gadget"/>
