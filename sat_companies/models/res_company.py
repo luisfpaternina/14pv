@@ -11,4 +11,6 @@ class ResCompany(models.Model):
         string="Is potencial client")
     has_rae = fields.Boolean(
         string="Has RAE")
+    is_forecast_made = fields.Boolean(
+        string="Is forecast made")
     

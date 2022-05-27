@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-25 21:08+0000\n"
-"PO-Revision-Date: 2022-05-25 21:08+0000\n"
+"POT-Creation-Date: 2022-05-27 17:04+0000\n"
+"PO-Revision-Date: 2022-05-27 17:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -249,11 +249,6 @@ msgid "Date"
 msgstr "Fecha"
 
 #. module: sat_companies
-#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
-msgid "Dates of technical in budget"
-msgstr "Datos del técnico en presupuesto"
-
-#. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_account_move__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_line__display_name
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__display_name
@@ -272,6 +267,11 @@ msgstr "Documentos"
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "Enable Transfer request"
 msgstr "Habilitar solicitud de transferencias"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Enable forecast made"
+msgstr "Habilitar previsión en ventas"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
@@ -328,6 +328,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies.field_account_move_unpaid__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Forecast made"
+msgstr "Previsión"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
@@ -418,6 +423,12 @@ msgstr "Contacto potencial"
 #: model:ir.model.fields,field_description:sat_companies.field_res_users__is_billing_administrator
 msgid "Is billing administrator"
 msgstr "Enviar factura al administrador"
+
+#. module: sat_companies
+#: model:ir.model.fields,field_description:sat_companies.field_res_company__is_forecast_made
+#: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__is_forecast_made
+msgid "Is forecast made"
+msgstr "Previsión"
 
 #. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_res_partner__is_maintainer
@@ -661,9 +672,13 @@ msgstr ""
 
 #. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_res_config_settings__module_sale_revision_history
-#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
 msgid "Sale revision history"
 msgstr "Historial de revisiones de ventas"
+
+#. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Sales"
+msgstr "Ventas"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
@@ -693,6 +708,11 @@ msgid "Show technical"
 msgstr "Habilitar técnico"
 
 #. module: sat_companies
+#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
+msgid "Stock"
+msgstr "Inventario"
+
+#. module: sat_companies
 #: model:ir.model.fields,field_description:sat_companies.field_res_company__terms
 msgid "Terms"
 msgstr "Términos"
@@ -711,11 +731,6 @@ msgstr "Campo RAE obligatorio cuando el producto es un aparato"
 #: model_terms:ir.ui.view,arch_db:sat_companies.report_template_invoice
 msgid "Total factura"
 msgstr ""
-
-#. module: sat_companies
-#: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
-msgid "Transfer request"
-msgstr "Solicitud de transferencias"
 
 #. module: sat_companies
 #: model_terms:ir.ui.view,arch_db:sat_companies.res_config_settings_view_form_sat
