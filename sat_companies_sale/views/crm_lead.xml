@@ -9,6 +9,14 @@
             <xpath expr="//field[(@name='priority')]" position="after">
                 <field name="is_external"/>
                 <field name="expected_total" invisible="1"/>
+                <field name="is_low" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-danger" role="alert" style="margin-bottom:10px;"
+                        attrs="{'invisible': [('is_low', '!=', True)]}">
+                    This contact is low
+                </div>
             </xpath>
 
             <xpath expr="//field[@name='lost_reason']" position="before">

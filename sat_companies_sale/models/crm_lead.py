@@ -66,6 +66,9 @@ class CrmLead(models.Model):
     expected_total = fields.Float(
         string="Expected total",
         compute="_compute_expected_revenue")
+    is_low = fields.Boolean(
+        string="Is low",
+        related="partner_id.is_low")
     
     
     @api.depends('order_ids')

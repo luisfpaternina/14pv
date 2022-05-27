@@ -30,6 +30,8 @@ class SaleOrder(models.Model):
         related="udn_id.is_normative")
     normative_date = fields.Date(
         string="Normative date")
+    comercial_description = fields.Html(
+        string="Description")
     
 
     @api.onchange(

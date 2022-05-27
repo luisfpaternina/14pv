@@ -5,9 +5,24 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
+
             <xpath expr="//field[@name='tag_ids']" position="after">
                 <field name="check_suscription_recurrent"/>
             </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+                <page string="Description" name="commercial_description">
+                    <group name="principal_group">
+                        <field name="comercial_description" attrs="{'readonly': [('origin', '!=', False)]}"/>
+                        <field name="origin" invisible="1"/>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='description_page']" position="attributes">
+                <attribute name="string">Observaciones</attribute>
+            </xpath>
+
             <xpath expr="//form/sheet/notebook/page[@name='extra_info']" position="after">
                 <page name="description_page" string="Qr Scanner">
                     <field name="pit_confirm" invisible="True"/>
@@ -156,6 +171,7 @@
             <xpath expr="//field[@name='categ_udn_id']" position="before">
                 <field name="ot_type_id" options="{'no_create': True, 'no_create_edit':True}" required="1"/>
                 <field name="is_maintenance" invisible="1"/>
+                <field name="origin" invisible="1"/>
                 <field name="gadgest_contract_type_id" options="{'no_create': True, 'no_create_edit':True}" attrs="{'invisible': [('is_maintenance', '!=', True)]}"/>
             </xpath>
 

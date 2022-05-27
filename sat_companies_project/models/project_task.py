@@ -114,6 +114,10 @@ class ProjectTaskInherit(models.Model):
         default=True)
     task_code = fields.Char(
         string="Task code")
+    comercial_description = fields.Html(
+        string="Description")
+    origin = fields.Char(
+        string="Origin")
 
 
     @api.onchange('partner_id','ot_type_id')

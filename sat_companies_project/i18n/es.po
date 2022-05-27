@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 14:10+0000\n"
-"PO-Revision-Date: 2022-05-23 14:10+0000\n"
+"POT-Creation-Date: 2022-05-27 12:13+0000\n"
+"PO-Revision-Date: 2022-05-27 12:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -96,6 +96,7 @@ msgid "Action Needed"
 msgstr "Acción necesaria"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task_template__active
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__active
 msgid "Active"
 msgstr "Activo"
@@ -237,7 +238,11 @@ msgid "Delegation"
 msgstr "Delegación"
 
 #. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__comercial_description
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task_categ_udn__description
+#: model:ir.model.fields,field_description:sat_companies_project.field_sale_order__comercial_description
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.view_sale_order_inherit_sat_companies_project
 msgid "Description"
 msgstr "Descripción"
 
@@ -593,9 +598,19 @@ msgid "OT type"
 msgstr "Tipo OT"
 
 #. module: sat_companies_project
+#: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
+msgid "Observaciones"
+msgstr ""
+
+#. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_task__order_lines
 msgid "Order Lines"
 msgstr "Líneas de orden"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__origin
+msgid "Origin"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_sale_order_type__is_other
@@ -695,7 +710,7 @@ msgstr "Error de entrega de SMS"
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_order_id
 msgid "Sale Order"
-msgstr "Pedido"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,field_description:sat_companies_project.field_project_project__sale_type_origin_id
@@ -777,6 +792,11 @@ msgstr "Tarea"
 #: model_terms:ir.ui.view,arch_db:sat_companies_project.project_task_inherit_form_view
 msgid "Task State"
 msgstr "Estado tarea"
+
+#. module: sat_companies_project
+#: model:ir.model.fields,field_description:sat_companies_project.field_project_task__task_code
+msgid "Task code"
+msgstr ""
 
 #. module: sat_companies_project
 #: model:ir.model.fields,help:sat_companies_project.field_sale_order_line__task_id

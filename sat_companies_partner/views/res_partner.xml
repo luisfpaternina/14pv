@@ -49,7 +49,15 @@
                 <field name="delegation_name"/>
                 <field name="high_date"/>
                 <field name="low_date"/>
+                <field name="is_low" invisible="1"/>
                 <field name="community_president" attrs="{'invisible': [('is_community', '!=', True)]}"/>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-danger" role="alert" style="margin-bottom:10px;"
+                        attrs="{'invisible': [('is_low', '!=', True)]}">
+                    This contact is low
+                </div>
             </xpath>
 
             <xpath expr="//field[(@name='email')]" position="after">

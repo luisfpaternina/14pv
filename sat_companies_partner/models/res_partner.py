@@ -4,6 +4,7 @@ from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 import logging
 import re
+from datetime import date
 
 
 class ResPartner(models.Model):
@@ -165,7 +166,18 @@ class ResPartner(models.Model):
         string="Community president")
     potencial_contact = fields.Boolean(
         string="Validator potencial contact")
+    is_low = fields.Boolean(
+        string="Is low",
+        compute="compute_low_date")
     
+
+    @api.depends('low_date')
+    def compute_low_date(self):
+        today = date.today()
+        if self.low_date:
+            self.is_low = True
+        else:
+            self.is_low = False
 
     @api.onchange('is_acommunity')
     def _onchange_community(self):
@@ -268,45 +280,14 @@ class ResPartner(models.Model):
         if vals.get('client_code', 'New') == 'New' and vals.get('is_potential_client')==False:
             vals['client_code'] = self.env['ir.sequence'].next_by_code('partner')
         result = super(ResPartner, self).create(vals)
-        """
-        for record in self:
-            if not record.is_admin and not record.is_maintainer\
-                and not record.is_oca and not record.is_potential_client:
-                    if not record.vat:
-                        raise ValidationError(_(
-                            'You must register an identification number'))
-                    if not record.bank_ids:
-                        raise ValidationError(_(
-                            'You must register a Bank account'))
-                    if not record.city:
-                        raise ValidationError(_(
-                            'You must register a city'))
-        """
         return result
-    
 
     def write(self, vals):
         if vals.get('client_code', 'New') == 'New' and vals.get('is_potential_client')==False:
             vals['client_code'] = self.env['ir.sequence'].next_by_code('partner')
         result = super(ResPartner, self).write(vals)
-        """
-        for record in self:
-            if not record.is_admin and not record.is_maintainer\
-                and not record.is_oca and not record.is_potential_client:
-                    if not record.vat:
-                        raise ValidationError(_(
-                            'You must register an identification number'))
-                    if not record.bank_ids:
-                        raise ValidationError(_(
-                            'You must register a Bank account'))
-                    if not record.city:
-                        raise ValidationError(_(
-                            'You must register a city'))
-        """
-
         return result
 
-    
     @api.constrains(
         'name',
         'bank_ids',
