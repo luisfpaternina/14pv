@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-16 19:51+0000\n"
-"PO-Revision-Date: 2022-05-16 19:51+0000\n"
+"POT-Creation-Date: 2022-05-27 13:53+0000\n"
+"PO-Revision-Date: 2022-05-27 13:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -697,6 +697,11 @@ msgid "Carta de No Defensa Jurídica"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.actions.report,name:sat_companies_sale.id_welcome_mjs
+msgid "Carta de bienvenida"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__check_contract_type
 msgid "Check Contract Type"
 msgstr "Tipo de contrato"
@@ -730,11 +735,6 @@ msgstr "Limpiar firma"
 #: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__client_type
 msgid "Client type"
 msgstr "Tipo de cliente"
-
-#. module: sat_companies_sale
-#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
-msgid "Close"
-msgstr "Cerrar"
 
 #. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_type_service__code
@@ -1199,6 +1199,13 @@ msgid "Is line"
 msgstr ""
 
 #. module: sat_companies_sale
+#: model:ir.model.fields,field_description:sat_companies_sale.field_crm_lead__is_low
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_partner__is_low
+#: model:ir.model.fields,field_description:sat_companies_sale.field_res_users__is_low
+msgid "Is low"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields,field_description:sat_companies_sale.field_sale_order__is_maintenance
 msgid "Is maintenance"
 msgstr "Mantenimiento"
@@ -1287,11 +1294,6 @@ msgstr "Carga(kgs)"
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.report_custom_template_sale_documentation
 msgid "Localidad donde se firma"
-msgstr ""
-
-#. module: sat_companies_sale
-#: model:ir.actions.report,name:sat_companies_sale.id_welcome_mjs
-msgid "MJS Bienvenido"
 msgstr ""
 
 #. module: sat_companies_sale
@@ -1758,6 +1760,11 @@ msgid "Reference"
 msgstr "Referencia"
 
 #. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
+msgid "Regresar a la orden del Back"
+msgstr ""
+
+#. module: sat_companies_sale
 #: model:ir.model.fields.selection,name:sat_companies_sale.selection__sale_order__sale_type__repair
 msgid "Repair"
 msgstr "Reparar"
@@ -1954,6 +1961,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
 msgid "The signed contract has been sent."
 msgstr "Se ha enviado el contrato firmado."
+
+#. module: sat_companies_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale.inherit_view_crm_lead_sat_companies
+msgid "This contact is low"
+msgstr "Este contacto esta de baja"
 
 #. module: sat_companies_sale
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale.sale_contract_report
