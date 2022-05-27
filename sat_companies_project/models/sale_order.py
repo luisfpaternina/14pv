@@ -125,6 +125,7 @@ class SaleOrder(models.Model):
                                     'ot_type_id': record.sale_type_id.id,
                                     'gadgest_contract_type_id': record.gadgets_contract_type_id.id,
                                     'project_id': project_fsm.id,
+                                    'sale_order_id': record.id,
                                     'user_id': record.task_user_id.id,
                                     'product_id': record.product_id.id,
                                     #'sale_line_id':record.id,
