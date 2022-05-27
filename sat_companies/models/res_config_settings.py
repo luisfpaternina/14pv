@@ -39,6 +39,11 @@ class ResConfigSettings(models.TransientModel):
         related="company_id.has_rae",
         readonly=False,
         config_parameter='sat_companies.has_rae')
+    is_forecast_made = fields.Boolean(
+        string="Is forecast made",
+        related="company_id.is_forecast_made",
+        readonly=False,
+        config_parameter='sat_companies.is_forecast_made')
     
 
     def set_values(self):
@@ -47,4 +52,5 @@ class ResConfigSettings(models.TransientModel):
         self.env['ir.config_parameter'].sudo().set_param('show_technical', self.show_technical)
         self.env['ir.config_parameter'].sudo().set_param('is_potencial_client', self.is_potencial_client)
         self.env['ir.config_parameter'].sudo().set_param('has_rae', self.has_rae)
+        self.env['ir.config_parameter'].sudo().set_param('is_forecast_made', self.is_forecast_made)
         return res
