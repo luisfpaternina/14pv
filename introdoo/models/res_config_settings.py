@@ -5,3 +5,5 @@ class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
     is_test = fields.Char(string="Test")
+    module_maintenance = fields.Boolean(
+        string="Maintenance")
