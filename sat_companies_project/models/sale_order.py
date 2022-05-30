@@ -72,7 +72,6 @@ class SaleOrder(models.Model):
             else:
                 record.action_confirm()
 
-
     def action_confirm(self):
         state_no_sale = False
         if self.state in ['sent']:
@@ -108,6 +107,8 @@ class SaleOrder(models.Model):
                                     'project_id': new_project.id,
                                     'user_id': record.task_user_id.id,
                                     'product_id': record.product_id.id,
+                                    'origin': record.name,
+                                    'comercial_description': record.comercial_description,
                                     #'sale_line_id':record.sale_order_id.id,
                                     #'planned_date_begin': record.sale_order_id.date_begin,
                                     #'planned_date_end': record.sale_order_id.date_end,
@@ -125,6 +126,8 @@ class SaleOrder(models.Model):
                                     'ot_type_id': record.sale_type_id.id,
                                     'gadgest_contract_type_id': record.gadgets_contract_type_id.id,
                                     'project_id': project_fsm.id,
+                                    'origin': record.name,
+                                    'comercial_description': record.comercial_description,
                                     'sale_order_id': record.id,
                                     'user_id': record.task_user_id.id,
                                     'product_id': record.product_id.id,

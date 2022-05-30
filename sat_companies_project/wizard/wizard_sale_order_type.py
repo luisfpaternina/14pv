@@ -143,6 +143,8 @@ class WizardSaleOrderType(models.TransientModel):
                                                 +' - '+record.sale_order_id.partner_id.name,
                                                 'partner_id': record.sale_order_id.partner_id.id,
                                                 'ot_type_id': record.sale_order_id.sale_type_id.id,
+                                                'origin': record.sale_order_id.name,
+                                                'comercial_description': record.sale_order_id.comercial_description,
                                                 'gadgest_contract_type_id': record.sale_order_id.gadgets_contract_type_id.id,
                                                 'user_id': record.sale_order_id.task_user_id.id,
                                                 'product_id': record.sale_order_id.product_id.id,
