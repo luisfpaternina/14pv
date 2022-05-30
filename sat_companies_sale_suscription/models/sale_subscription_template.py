@@ -55,3 +55,15 @@ class SaleSuscriptionTemplateInherit(models.Model):
         ('years','Years')],string="Contract recurring rule")
     subscription_month_ids = fields.Many2many(
         'sale.subscription.month')
+    udn_id = fields.Many2one(
+        'project.task.categ.udn',
+        string="Udn")
+    
+    @api.onchange('sale_type_id')
+    def domain_udns(self):
+    # FUNCIÓN PARA APLICAR DOMINIO
+        for record in self:
+            if record.sale_type_id:
+                return {'domain': {'udn_id': [('ot_type_id', '=', record.sale_type_id.id)]}}
+            else:
+                return {'domain': {'udn_id': []}}
