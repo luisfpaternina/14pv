@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-04 15:10+0000\n"
-"PO-Revision-Date: 2022-03-04 15:10+0000\n"
+"POT-Creation-Date: 2022-05-30 18:36+0000\n"
+"PO-Revision-Date: 2022-05-30 18:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1105,6 +1105,12 @@ msgid "Greasing operator"
 msgstr "Operador engrase"
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__has_rae
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__has_rae
+msgid "Has RAE"
+msgstr ""
+
+#. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.custom_view_product_template_search
 msgid "Has partner type"
 msgstr "Tipo de contacto establecido"
@@ -2036,6 +2042,12 @@ msgid "Number of messages with delivery error"
 msgstr ""
 
 #. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__number_of_tubes
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__number_of_tubes
+msgid "Number of tubes"
+msgstr "Número de tubos"
+
+#. module: sat_companies_stock
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_bench__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_bidirectional_model__message_unread_counter
 #: model:ir.model.fields,help:sat_companies_stock.field_stock_cockpit_push_type__message_unread_counter
@@ -2437,7 +2449,6 @@ msgstr "Polea tensora(cm)"
 
 #. module: sat_companies_stock
 #: code:addons/sat_companies_stock/models/.ipynb_checkpoints/product-checkpoint.py:0
-#: code:addons/sat_companies_stock/models/product.py:0
 #: code:addons/sat_companies_stock/models/stock_gadgets.py:0
 #, python-format
 msgid "The contract start date cannot be greater than the end date"
@@ -2445,17 +2456,21 @@ msgstr ""
 
 #. module: sat_companies_stock
 #: code:addons/sat_companies_stock/models/.ipynb_checkpoints/product-checkpoint.py:0
-#: code:addons/sat_companies_stock/models/product.py:0
 #, python-format
 msgid "The number of people cannot lesser cero! : %s"
 msgstr ""
 
 #. module: sat_companies_stock
 #: code:addons/sat_companies_stock/models/.ipynb_checkpoints/product-checkpoint.py:0
-#: code:addons/sat_companies_stock/models/product.py:0
 #, python-format
 msgid "The number of stops cannot lesser cero! : %s"
 msgstr ""
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__there_are_keys
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__there_are_keys
+msgid "There are keys"
+msgstr "Hay llaves"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__today
@@ -2614,6 +2629,12 @@ msgstr "Validar activo"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_validate_date
 msgid "Validate dates"
 msgstr "Validador de fechas"
+
+#. module: sat_companies_stock
+#: code:addons/sat_companies_stock/models/sale_subscription.py:0
+#, python-format
+msgid "Validate potential client in partner"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.actions.act_window,name:sat_companies_stock.action_view_wash_cabin

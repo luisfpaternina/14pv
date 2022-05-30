@@ -464,6 +464,10 @@ class ProductTemplate(models.Model):
     has_rae = fields.Boolean(
         string="Has RAE",
         compute="compute_rae")
+    there_are_keys = fields.Boolean(
+        string="There are keys")
+    number_of_tubes = fields.Char(
+        string="Number of tubes")
     
     @api.depends('is_gadget')
     def compute_rae(self):

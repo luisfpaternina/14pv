@@ -85,7 +85,6 @@ class CrmLead(models.Model):
             self.expected_total = 0
             self.expected_revenue = 0
 
-
     @api.onchange('sale_type_id')
     def domain_saletype_udn(self):
         for record in self:
@@ -93,7 +92,6 @@ class CrmLead(models.Model):
                 return {'domain': {'udn_type_id': [('ot_type_id', '=', record.sale_type_id.id)]}}
             else:
                 return {'domain': {'udn_type_id': []}}
-
 
     @api.onchange(
         'stage_id',
@@ -105,18 +103,15 @@ class CrmLead(models.Model):
             self.is_validate_days = True
         return False
 
-
     @api.depends('medium_id')
     def _compute_check_medium_id(self):
         for record in self:
             record.is_medium_website = True if record.medium_id and record.medium_id[0].name  == 'Website' else False
 
-
     @api.depends('medium_id')
     def _compute_check_email_medium_id(self):
         for record in self:
             record.is_medium_email = True if record.medium_id and record.medium_id[0].name  == 'Email' else False
-
 
     @api.depends('medium_id')
     def _compute_is_external(self):
@@ -125,7 +120,6 @@ class CrmLead(models.Model):
                 record.is_external = True
             else:
                 record.is_external = False
-
 
     def _compute_quote_date_sent_min(self):
         for record in self:
@@ -138,7 +132,6 @@ class CrmLead(models.Model):
                 min_date = min(dt_orders)
                 max_date = max(dt_orders)
             record.quote_date_sent_min = min_date
-
 
     @api.depends('quote_date_sent_min')
     def _calculated_days(self):
@@ -156,6 +149,5 @@ class CrmLead(models.Model):
                 'default_udn_id': self.udn_type_id.id,
                 'default_sale_type_id': self.sale_type_id.id,
             }
-        
             result.get('context').update(vals)
         return result
