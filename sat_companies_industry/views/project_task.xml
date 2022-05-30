@@ -131,4 +131,17 @@
 
         </field>
     </record>
+
+    <record id="inherit_treeview_project_task_sat_companies" model="ir.ui.view">
+        <field name="name">inherit.form.project.task</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_list_fsm"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="product_id"/>
+                <field name="rae"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>     
