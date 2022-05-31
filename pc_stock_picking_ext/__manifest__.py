@@ -23,7 +23,10 @@
     'data': [
 
         'security/security.xml',  
-        #'security/ir.model.access.csv',    
+        #'security/ir.model.access.csv',
+        'data/send_material_notification.xml',
+        'data/send_aswer_material_notification.xml',
+        'data/base_automatization.xml',
         'views/stock_picking.xml',
               
     ],
