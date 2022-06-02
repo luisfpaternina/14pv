@@ -12,8 +12,7 @@
                     <group>
                     <group>
                         <field name="count" attrs="{'invisible': [('count','=',1)]}" readonly="True"/>
-                        <field name="advance_payment_method" class="oe_inline" widget="radio"
-                            attrs="{'invisible': [('count','&gt;',1)]}"/>
+                        <field name="advance_payment_method" class="oe_inline" widget="radio"/>
                         <field name="has_down_payments" invisible="1" />
                         <label for="deduct_down_payments" string="" attrs="{'invisible': ['|', ('has_down_payments', '=', False), ('advance_payment_method', '!=', 'delivered')]}"/>
                         <div attrs="{'invisible': ['|', ('has_down_payments', '=', False), ('advance_payment_method', '!=', 'delivered')]}">
@@ -31,7 +30,7 @@
                         <field name="deposit_account_id" class="oe_inline"
                             attrs="{'invisible': ['|', ('advance_payment_method', 'not in', ('fixed', 'percentage')), ('product_id', '!=', False)]}" groups="account.group_account_manager"/>
                         <field name="deposit_taxes_id" class="oe_inline" widget="many2many_tags"
-                            domain="[('type_tax_use','=','sale')]"
+                            domain="[('type_tax_use','=','purchase')]"
                             attrs="{'invisible': ['|', ('advance_payment_method', 'not in', ('fixed', 'percentage')), ('product_id', '!=', False)]}"/>
                     </group>
                     <group></group>
@@ -53,7 +52,7 @@
             <field name="res_model">purchase.advance.payment.inv</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-            <field name="binding_model_id" ref="sale.model_sale_order" />
+            <field name="binding_model_id" ref="purchase.model_purchase_order" />
         </record>
 
 </odoo>

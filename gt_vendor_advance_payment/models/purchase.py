@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from itertools import groupby
-
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 from odoo.tools import float_is_zero, float_compare, DEFAULT_SERVER_DATETIME_FORMAT
 import odoo.addons.decimal_precision as dp
+import logging
 
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
@@ -22,6 +22,15 @@ class PurchaseOrder(models.Model):
     transaction_ids = fields.Many2many('payment.transaction', string='Transactions', copy=False, readonly=True)
     po_inv_count = fields.Integer(string="Purchase Invoice Count", compute='compute_purchase_inv_count')
     is_regular_invoice = fields.Boolean(string="Full payment",default=False,copy=False)
+    partner_shipping_id = fields.Many2one('res.partner', string="Shipping partner")
+    acumulate = fields.Float(string="Acumulate")
+
+
+    def calculate_acumulate(self):
+        invoice_obj = self.env['account.move'].search([('invoice_origin', '=', self.name)])
+        if invoice_obj:
+            for inv in invoice_obj:
+                self.acumulate = inv.amount_total
 
     def copy(self, default=None):
         duplicate_po = super(PurchaseOrder, self).copy(default=default)
@@ -41,16 +50,7 @@ class PurchaseOrder(models.Model):
         return res
 
     def _prepare_invoice(self):
-        """
-        Prepare the dict of values to create the new invoice for a sales order. This method may be
-        overridden to implement custom invoice generation (making sure to call super() to establish
-        a clean extension chain).
-        """
-        self.ensure_one()
-        journal = self.env['account.move'].with_context(force_company=self.company_id.id, default_type='out_invoice')._get_default_journal()
-        if not journal:
-            raise UserError(_('Please define an accounting purchase journal for the company %s (%s).') % (self.company_id.name, self.company_id.id))
-
+        
         invoice_vals = {
             'ref': self.client_order_ref or '',
             'move_type': 'in_invoice',
@@ -63,6 +63,7 @@ class PurchaseOrder(models.Model):
             'invoice_origin': self.name,
             'invoice_payment_term_id': self.payment_term_id.id,
             'payment_reference': self.partner_ref,
+            'company_id': self.company_id.id,
             'transaction_ids': [(6, 0, self.transaction_ids.ids)],
             'invoice_line_ids': [],
         }

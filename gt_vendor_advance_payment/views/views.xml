@@ -9,6 +9,7 @@
           <xpath expr="//field[@name='partner_id']" position="before">
               <field name="hide_invoice" invisible="1"/>
               <field name="currency_id"/>
+              <field name="acumulate"/>
               <field name="is_regular_invoice" invisible="1"/>
           </xpath>
           <xpath expr="//form/header/button[@name='action_rfq_send']" position="before">
