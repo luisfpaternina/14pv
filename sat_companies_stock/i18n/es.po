@@ -1324,7 +1324,7 @@ msgstr "Ubicaciones de inventario"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__invoice_start_date
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__invoice_start_date
 msgid "Invoice start date"
-msgstr "Inicio de factura"
+msgstr "Inicio de facturación"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_full_service

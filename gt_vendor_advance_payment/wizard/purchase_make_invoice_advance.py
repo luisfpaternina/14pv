@@ -116,7 +116,6 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 	def create_invoices(self):
 		for rec in self:
 			purchase_orders = rec.env['purchase.order'].browse(self._context.get('active_ids', []))
-
 			if rec.advance_payment_method == 'delivered':
 				purchase_orders._create_invoices(final=rec.deduct_down_payments)
 				purchase_orders.is_regular_invoice = True
@@ -169,8 +168,8 @@ class PurchaseMakeInvoiceAdvance(models.TransientModel):
 						purchase_orders = rec.env['purchase.order'].browse(rec._context.get('active_ids', []))
 						po_ids = []
 						for p in purchase_orders:
-							inv_ids = rec.env['account.move'].search([('invoice_origin', '=',p.name)]).id
-							po_ids.append(inv_ids)
+							inv_ids = rec.env['account.move'].search([('invoice_origin', '=',p.name)]).ids
+							po_ids.extend(inv_ids)
 						list_view_id = rec.env.ref('account.view_invoice_tree').id
 						form_view_id = rec.env.ref('account.view_move_form').id
 						result = {
