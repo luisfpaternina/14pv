@@ -31,7 +31,7 @@
                                 <field name="default_code"/>
                             </group>
                             <group>
-                                <field name="start_date_contract"/>
+                                <field name="high_date"/>
                                 <field name="gadget_low_date"/>
                                 <field name="high_date_call_center"/>
                             </group>
@@ -69,7 +69,7 @@
                                 <field name="keys"/>
                             </group>
                             <group>
-                                <field name="high_date"/>
+                                <field name="start_date_contract"/>
                                 <field name="end_guarantee"/>
                                 <field name="years_number" invisible="1"/>
                                 <field name="months_number" invisible="1"/>
