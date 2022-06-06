@@ -213,10 +213,12 @@ class ProductTemplate(models.Model):
         tracking=True)
     latitude = fields.Float(
         string="Latitude",
-        tracking=True)
+        tracking=True,
+        digits=(12,7))
     length = fields.Float(
         string="Length",
-        tracking=True)
+        tracking=True,
+        digits=(12,7))
     route_id = fields.Many2one(
         'res.partner.routes',
         string="Route",
