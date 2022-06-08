@@ -17,6 +17,7 @@
                             <group>
                                 <field name="partner_admin_id" options="{'no_create': True, 'no_create_edit':True}" domain = "[('is_admin','=',True)]"/>
                                 <field name="is_community" invisible="1"/>
+                                <field name="address"/>
                             </group>
                             <group>
                                 
@@ -43,7 +44,6 @@
                                 
                             </group>
                             <group>
-                                <field name="address"/>
                                 <field name="location"/>
                             </group>
                              <group>
