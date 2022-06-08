@@ -61,6 +61,7 @@ class PurchaseOrder(models.Model):
             'partner_id': self.partner_id.id,
             'fiscal_position_id': self.fiscal_position_id.id, #or self.partner_invoice_id.property_account_position_id.id,
             'invoice_origin': self.name,
+            'origin_po': self.name,
             'invoice_payment_term_id': self.payment_term_id.id,
             'payment_reference': self.partner_ref,
             'company_id': self.company_id.id,
@@ -129,6 +130,7 @@ class PurchaseOrder(models.Model):
                 ref_invoice_vals.update({
                     'ref': ', '.join(refs),
                     'invoice_origin': ', '.join(origins),
+                    'origin_po': ', '.join(origins),
                     'payment_reference': len(payment_refs) == 1 and payment_refs.pop() or False,
                 })
                 new_invoice_vals_list.append(ref_invoice_vals)
@@ -155,10 +157,11 @@ class PurchaseOrder(models.Model):
         moves += self.env['account.move'].with_context(default_move_type='out_refund').create(refund_invoice_vals_list)
         for move in moves:
             move.message_post_with_view('mail.message_origin_link',
-                values={'self': move, 'origin': move.line_ids.mapped('purchase_line_id.order_id')},
+                values={'self': move, 'origin': move.line_ids.mapped('purchase_line_id.order_id.name')},
                 subtype_id=self.env.ref('mail.mt_note').id 
             )
         return moves
+
     def get_po_invoice_view_2(self):
         # purchase_orders = self.env['purchase.order'].browse(self._context.get('active_ids', []))
         inv_ids = self.env['account.move'].search([('invoice_origin', '=',self.name)]).ids

@@ -150,7 +150,7 @@ class ProductTemplate(models.Model):
     address = fields.Char(
         string="Address",
         tracking=True,
-        related="partner_id.street")
+        related="partner_admin_id.street")
     address2 = fields.Char(
         string="Address 2",
         tracking=True)

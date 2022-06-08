@@ -34,9 +34,13 @@ This module will help to handle advance payments from vendors in different metho
     "currency": "USD",
     'depends': ['base','purchase','sale'],
     'data': [
+
         'security/ir.model.access.csv',
         'wizard/purchase_make_invoice_advance_view.xml',
         'views/views.xml',
+        'views/account_move.xml',
+        'data/origin_po_notification.xml',
+        'data/base_automatization.xml',
 
     ],
 
