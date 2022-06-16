@@ -21,14 +21,12 @@ class SaleOrderTemplateInherit(models.Model):
             else:
                 record.check_contract_type = False
 
-
     @api.onchange('partner_id')
     def _get_partner_acc_account(self):
         partner_obj = self.env['res.partner'].search([('name', '=', self.partner_id.name)],limit=1)
         for p in partner_obj.bank_ids:
             if p.is_default:
                 self.acc_number = p.acc_number
-
 
     @api.onchange('sale_type_id')
     def domain_saletype_udn(self):
@@ -37,23 +35,6 @@ class SaleOrderTemplateInherit(models.Model):
                 return {'domain': {'sale_order_template_id': [('sale_type_id', '=', record.sale_type_id.id)]}}
             else:
                 return {'domain': {'sale_order_template_id': []}}
-    
-    """
-    @api.onchange('sale_type_id','gadgets_contract_type_id')
-    def sale_order_template_domain(self):
-        for record in self:
-            record.sale_order_template_id = False
-            if record.sale_type_id and record.gadgets_contract_type_id:
-                sales_orders = self.env['sale.order.template'].search([('sale_type_id','=', record.sale_type_id.id),('gadgets_contract_type_id','=', record.gadgets_contract_type_id.id)])
-                ids_order_templates = sales_orders.ids
-
-                return {'domain': {'sale_order_template_id': [('id', 'in', ids_order_templates)]}}
-            else:
-                sales_orders = self.env['sale.order.template'].search([('sale_type_id','=', False),('type_contract','=', False)])
-                ids_order_templates = sales_orders.ids
-        
-                return {'domain': {'sale_order_template_id': [('id', 'in', ids_order_templates)]}}
-    """
 
     def create_subscriptions(self):
         res = super(SaleOrderTemplateInherit, self).create_subscriptions()
