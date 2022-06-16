@@ -41,14 +41,12 @@ class SaleOrder(models.Model):
         if self.sale_type_id:
             self.is_mounting = self.sale_type_id.is_mounting
 
-
     def get_task_sale_type(self):
         for record in self:
             if record.sale_order_template_id:
                 sale_order_template = str(record.sale_order_template_id.name+' - ')
             else:
                 sale_order_template = ''
-
             if record.sale_type_id:
                 order_type_form = record.env.ref('sat_companies_project.wizard_sale_order_type_form',raise_if_not_found=False)
                 ctx = dict(

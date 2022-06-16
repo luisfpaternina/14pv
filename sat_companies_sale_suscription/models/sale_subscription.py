@@ -95,7 +95,6 @@ class SaleSuscriptionInherit(models.Model):
     def compute_show_technical(self):
         show_technical = self.env['ir.config_parameter'].sudo().get_param('sat_companies.show_technical') or False
         self.show_technical = show_technical
-    
 
     def action_welcome_email_send(self):
         self.contract_send = True
@@ -131,7 +130,6 @@ class SaleSuscriptionInherit(models.Model):
         pdf = self.env.ref('sat_companies_sale_suscription.template_email_welcome').render_qweb_pdf(self.ids)
         b64_pdf = base64.b64encode(pdf[0])
 
-
     @api.depends('check_signature')
     def action_get_attachment(self):
         for record in self:
@@ -146,18 +144,15 @@ class SaleSuscriptionInherit(models.Model):
             else:
                 record.pdf_file_welcome = False
     
-
     def button_rejected_stage(self):
         rs = self.env['sale.subscription.stage'].search([('stage_code', '=', '1')], limit=1)
         self.write({'stage_id': rs.id})
-
 
     @api.onchange('product_id')
     def onchange_product_gadget_id(self):
         if self.product_id:
             self.low_date = self.product_id.low_date
             self.res_partner_low_mto_id = self.product_id.res_partner_low_mto_id.id
-
 
     @api.depends('stage_id')
     def _compute_extension_stage(self):
@@ -167,7 +162,6 @@ class SaleSuscriptionInherit(models.Model):
             else:
                 record.is_extension_stage = False
     
-
     @api.onchange('stage_id')
     def _compute_suspension_stage(self):
         for record in self:
@@ -176,12 +170,10 @@ class SaleSuscriptionInherit(models.Model):
             else:
                 record.is_suspension_stage = False
 
-
     @api.onchange('product_id')
     def _template_gadget(self):
         for record in self:
             record.template_id = record.product_id.subscription_template_id
-
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
@@ -189,12 +181,6 @@ class SaleSuscriptionInherit(models.Model):
         for record in self:
             if record.partner_id.payment_term_maintenance_id:
                 record.payment_term_id = record.partner_id.payment_term_maintenance_id
-                """
-                vals = {
-                    'payment_term_id': record.partner_id.payment_term_maintenance_id.id
-                }
-                record.sudo().write(vals)
-                """
         return res
 
     def start_subscription(self):
@@ -215,13 +201,7 @@ class SaleSuscriptionInherit(models.Model):
                 'is_fsm': True
 
             })
-            """
-            if record.recurring_invoice_line_ids:
-                for line in record.recurring_invoice_line_ids.order_line:
-                    line.task_id = new_task.id
-            """
         return res
-
 
     @api.onchange('product_id')
     def onchange_check_product(self):
@@ -233,7 +213,6 @@ class SaleSuscriptionInherit(models.Model):
             record.sale_type_id = sale_type
             record.gadgest_contract_type_id = gadgets_contract
 
-
     @api.depends('sale_type_id')
     def _compute_check_contract_type(self):
         for record in self:
@@ -243,7 +222,6 @@ class SaleSuscriptionInherit(models.Model):
             else:
                 record.check_contract_type = False
 
-
     @api.constrains('partner_id')
     def _validate_is_potential_client(self):
         for record in self:
@@ -251,26 +229,10 @@ class SaleSuscriptionInherit(models.Model):
                 raise ValidationError(_(
                     'Validate potential client in partner'))
 
-
     @api.onchange('team_id')
     def _onchange_team(self):
         for record in self:
             print('team')
-
-    """
-    @api.model
-    def _cron_recurring_create_invoice(self):
-        self.active_cron_invoice = True
-        res = super(SaleSuscriptionInherit, self)._cron_recurring_create_invoice()
-        return res
-    """
-
-    """
-    def _active_cron_invoice(self,active_cron):
-        active_cron = True
-        return active_cron
-    """
-
 
     def _recurring_create_invoice(self):
         res = super(SaleSuscriptionInherit, self)._recurring_create_invoice()

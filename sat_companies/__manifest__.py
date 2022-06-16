@@ -31,6 +31,7 @@
         'security/ir.model.access.csv',
         'views/res_company.xml',
         'views/account_move_line.xml',
+        'views/res_partner.xml',
         'views/views_res_config_settings.xml',
         'reports/invoice.xml',
         'reports/inherit_sale_order.xml',

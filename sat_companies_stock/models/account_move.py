@@ -42,7 +42,18 @@ class AccountMove(models.Model):
         'sale.subscription.template',
         string="Subscription template",
         related="product_id.subscription_template_id")
+    udn_type_id = fields.Many2one(
+        'project.task.categ.udn',
+        string="Udn")
 
+
+    @api.onchange('sale_type_id', 'product_id')
+    def domain_udns(self):
+        for record in self:
+            if record.sale_type_id:
+                return {'domain': {'udn_type_id': [('ot_type_id', '=', record.sale_type_id.id)]}}
+            else:
+                return {'domain': {'udn_type_id': []}}
 
     @api.depends('sale_type_id')
     def _compute_check_contract_type(self):

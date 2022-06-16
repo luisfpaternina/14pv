@@ -42,7 +42,9 @@ class ResPartner(models.Model):
         'is_admin')
     def validate_fields(self):
         for record in self:
-            if not record.parent_id:
+            potencial_contact = self.env['ir.config_parameter'].sudo().get_param('sat_companies.is_potencial_client') or False
+            record.potencial_contact = potencial_contact
+            if not record.parent_id and record.potencial_contact:
                 if not record.is_admin and not record.is_maintainer\
                     and not record.is_oca and not record.is_potential_client:
                         if not record.vat:
