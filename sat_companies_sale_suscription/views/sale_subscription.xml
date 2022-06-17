@@ -27,6 +27,7 @@
                         <field name="check_signature" invisible="1"/>
                         <field name="pdf_file_welcome"/>
                         <field name="stage_code" invisible="1"/>
+                        <field name="exclude_months"/>
                     </group>
 
                 </group>
@@ -37,6 +38,11 @@
                   <group>
                     
                   </group>
+                </page>
+                <page string='Free Months' attrs="{'invisible': [('exclude_months', '=', False)]}">
+                        <group>
+                            <field name="subscription_month_ids"/>
+                        </group>
                 </page>
             </xpath>
 
