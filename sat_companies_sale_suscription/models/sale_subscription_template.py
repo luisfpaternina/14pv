@@ -17,8 +17,6 @@ class SaleSuscriptionTemplateInherit(models.Model):
     gadgets_contract_type_id = fields.Many2one(
         'stock.gadgets.contract.type',
         string="Subscription type")
-    exclude_months = fields.Boolean(
-        'Exlude Months')
     jan = fields.Boolean(
         'January')
     feb = fields.Boolean(
@@ -53,8 +51,6 @@ class SaleSuscriptionTemplateInherit(models.Model):
         ('days','Days'),
         ('months','Months'),
         ('years','Years')],string="Contract recurring rule")
-    subscription_month_ids = fields.Many2many(
-        'sale.subscription.month')
     udn_id = fields.Many2one(
         'project.task.categ.udn',
         string="Udn")

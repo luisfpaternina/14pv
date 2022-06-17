@@ -15,21 +15,6 @@
                 <field name="contract_duration"/>
                 <field name="contract_recurring_rule"/>
             </xpath>
-
-            <xpath expr="//form/sheet/notebook/page/group[1]/group[2]/group[1]/field[@name='code']" position="after">
-                <field name="exclude_months"/>
-            </xpath>
-
-            <xpath expr="//form/sheet/notebook[1]/page[1]/group[1]" position="after">
-                <notebook attrs="{'invisible': [('exclude_months', '=', False)]}">
-                    <page string='Free Months'>
-                        <group>
-                            <field name="subscription_month_ids"/>
-                        </group>
-                    </page>
-                </notebook>
-            </xpath>
-
         </field>
     </record>
 </odoo>     

@@ -89,6 +89,10 @@ class SaleSuscriptionInherit(models.Model):
     show_technical = fields.Boolean(
         string="Enable technical",
         compute="compute_show_technical")
+    exclude_months = fields.Boolean(
+        'Exlude Months')
+    subscription_month_ids = fields.Many2many(
+        'sale.subscription.month')
 
 
     @api.depends('partner_id', 'product_id')
@@ -277,7 +281,7 @@ class SaleSuscriptionInherit(models.Model):
         for record in self:
             recurring_interval = record.template_id.recurring_interval
             #active_cron = record._active_cron_invoice(active_cron)
-            if record.template_id.exclude_months == True:
+            if record.exclude_months == True:
                 #if active_cron == True:
                 #    date_today = datetime.now().month
                 #else:
@@ -311,7 +315,7 @@ class SaleSuscriptionInherit(models.Model):
                         if tuple_m:
                             m = []
                             for t in tuple_m:
-                                for monthn_check in record.template_id.subscription_month_ids:
+                                for monthn_check in record.subscription_month_ids:
                                     if t[0] == monthn_check.code:
                                         m.append(t)
 
