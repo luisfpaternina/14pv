@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 13:00+0000\n"
-"PO-Revision-Date: 2022-03-14 13:00+0000\n"
+"POT-Creation-Date: 2022-06-21 12:38+0000\n"
+"PO-Revision-Date: 2022-06-21 12:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgid ""
 "                <p>Comunidad de Propietarios</p>\n"
 "                <p>${object.partner_id.name}</p>\n"
 "                <p>Muy Sres. míos</p>\n"
-"                <p>Es nuestro deseo dar por concluidos sus servicios de mantenimiento del ascensor, por lo que por el presente les comunicamos formalmente que con fecha de de damos por resuelto el referido contrato de mantenimiento, por lo que expresamente les requerimos a fin de que a partir de dicho día inclusive, se abstengan de entrar en la escalera de la comunidad, así como de realizar cualquier actuación en el ascensor si no cuentan con el consentimiento expreso y por escrito de la comunidad.Asimismo les REQUIERO para que en el improrrogable plazo de 15 días nos faciliten los códigos de acceso de la maniobra del ascensor Rae nº ${object.product_id.rae} sito en  ${object.partner_id.street} ${object.partner_id.city}  dado que éstos pertenecen al titular del mismo, la comunidad de propietarios ${object.partner_id.name} De no atender esta petición amistosa nos veremos obligados a instar cuantas acciones legales sean necesarias para la defensa de nuestros legítimos intereses , indicándoles que, de no facilitar dichos códigos, serán únicos responsables de cuantos costes , daños y perjuicios suponga para la comunidad la falta de acceso a la maniobra por no disponer de los mismos</p>\n"
+"                <p>Es nuestro deseo dar por concluidos sus servicios de mantenimiento del ascensor, por lo que por el presente les comunicamos formalmente que con fecha de de damos por resuelto el referido contrato de mantenimiento, por lo que expresamente les requerimos a fin de que a partir de dicho día inclusive, se abstengan de entrar en la escalera de la comunidad, así como de realizar cualquier actuación en el ascensor si no cuentan con el consentimiento expreso y por escrito de la comunidad.Asimismo les REQUIERO para que en el improrrogable plazo de 15 días nos faciliten los códigos de acceso de la maniobra del ascensor RAE Nº ${object.product_id.rae} sito en  ${object.partner_id.street} ${object.partner_id.city}  dado que éstos pertenecen al titular del mismo, la comunidad de propietarios ${object.partner_id.name} De no atender esta petición amistosa nos veremos obligados a instar cuantas acciones legales sean necesarias para la defensa de nuestros legítimos intereses , indicándoles que, de no facilitar dichos códigos, serán únicos responsables de cuantos costes , daños y perjuicios suponga para la comunidad la falta de acceso a la maniobra por no disponer de los mismos</p>\n"
 "                <p>Sin nada mas, reciban un saludo.</p>\n"
 "                <br></br> <br></br>\n"
 "                <center>El Presidente de la Comunidad</center>\n"
@@ -55,7 +55,7 @@ msgid ""
 "\n"
 "Identificación del Responsable.\n"
 "\n"
-"Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} conNIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.\n"
+"Le informamos que los datos personales que Usted nos proporciona son incorporados a un tratamiento de datos personales denominado CLIENTES cuyo responsable es {object.company_id.name} con NIF {object.company_id.vat} y con domicilio en {object.company_id.street}, {object.company_id.city}, {object.company_id.state_id.name}. Puede contactar con elResponsable, bien por teléfono en el número {object.company_id.phone} o bien mediante correo electrónico en el buzón {object.company_id.email}.\n"
 "\n"
 "Finalidad.\n"
 "\n"
@@ -105,7 +105,7 @@ msgid ""
 "\n"
 " \n"
 "\n"
-"Dn./a, {object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.\n"
+"{object.partner_id.name} con NIF/CIF {object.partner_id.vat} doy mi consentimiento expreso de acuerdo con lo expuesto en el presente documento.\n"
 "\n"
 "Firmado. \n"
 "                 \n"
@@ -119,16 +119,15 @@ msgid ""
 "                <center><strong>ANEXO AMPLIACION DURACION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>\n"
 "                <br/>\n"
 "                <p>COMUNIDAD DE PROPIETARIOS</p>\n"
-"                <p>Por una parte, D.${object.company_id.partner_manager_id.name}, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>\n"
+"                <p>Por una parte, ${object.company_id.partner_manager_id.name}, mayor de edad, con DNI Nº ${object.company_id.partner_manager_id.vat} en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF Nº ${object.company_id.partner_id.vat},</p>\n"
 "                <br/>\n"
-"                <p>Y por otra, D./Dª ${object.partner_id.name}, mayor de edad, con DNI nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios ………………………………………………..( en adelante LA COMUNIDAD)</p>\n"
+"                <p>Y por otra, ${object.partner_id.name}, con DNI Nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios</p>\n"
 "                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando el presente <strong>ANEXO DE AMPLIACION DE LA DURACION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR,</strong> que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>\n"
 "                <strong><p>ACUERDAN:</p></strong>\n"
-"                <p><strong>Primero.-</strong> Que la COMUNIDAD DE PROPIETARIOS tiene que pagar la cantidad de________ en virtud de del procedimiento judicial que se ha tramitado en Juzgado de 1ª Instancia Nº … de …..,  autos …….., cuya sentencia o fallo se ha dictado con fecha ……………..</p>\n"
-"                <p><strong>Segundo.-</strong>Que mediante el presente acuerdo ambas partes amplían el contrato de mantenimiento de ascensor que tenían suscrito con fecha ________________por periodo de……….años , renovable por iguales periodos,  por lo que , con esta prórroga el  contrato   vence   el .…  de ……..  de  ……….manteniéndose vigentes el resto de sus cláusulas.</p>\n"
-"                <p><strong>Tercero.-</strong>Que la Mercantil ${object.company_id.name}  en este acto presta a la comunidad la cantidad de _____ euros para el pago de la cuantía que consta en el acuerdo primero.</p>\n"
-"                <p><strong>Cuarto -</strong> Para el caso de que la COMUNIDAD DE PROPIETARIOS resuelva anticipadamente el contrato de mantenimiento antes del transcurso de la duración pactada, ésta deberá reintegrar a la Mercantil  ${object.company_id.name} la cantidad prestada en el hecho tercero</p>\n"
-"                <p><strong>Quinto -</strong> Que ambas partes se someten, del modo más expreso, a los Tribunales de Justicia de Elche para cualquier divergencia, con renuncia a otro fuero que les pudiera corresponder.</p>\n"
+"                <p><strong>Primero.-</strong> Que con fecha ${object.date_start} ambas partes suscriben contrato de mantenimiento de ascensor por periodo de …………… (… años), renovable por iguales periodos. Que será vigente a partir del inicio del próximo trimestre desde la firma del presente documento. </p>\n"
+"                <p><strong>Segundo.-</strong>Segundo.-Que como bonificación por la ampliación de la duración del contrato, la Mercantil ${object.company_id.name} abonará la cantidad de  ${object.recurring_total}(€) por todos los gastos ocasionados a la COMUNIDAD DE PROPIETARIOS con motivo del procedimiento judicial que se ha tramitado en Juzgado de 1ª Instancia Nº …..procedimiento ……….., cuya sentencia nº …………… se ha dictado con fecha ………….. Los gastos satisfechos a la comunidad incluyen principal, costas, intereses, defensa letrada y representación del procurador.</p>\n"
+"                <p><strong>Tercero.-</strong>Para el caso de que la COMUNIDAD DE PROPIETARIOS resuelva anticipadamente el contrato de mantenimiento antes del transcurso de la duración pactada, ésta deberá reintegrar a la Mercantil  ${object.company_id.name} la suma total de los gastos devengados por el procedimiento judicial antes señalado y que hayan sido abonados por la misma. </p>\n"
+"                <p><strong>Cuarto -</strong> Que ambas partes se someten, del modo más expreso, a los Tribunales de Justicia de Elche para cualquier divergencia, con renuncia a otro fuero que les pudiera corresponder.</p>\n"
 "                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>\n"
 "                <br/><br/>\n"
 "                <p>${object.company_id.name}</p>\n"
@@ -143,15 +142,16 @@ msgid ""
 "                <center><strong>SUSPENSION CONTRATO MANTENIMIENTO ASCENSOR.</strong></center>\n"
 "                <br/>\n"
 "                <p>COMUNIDAD DE PROPIETARIOS</p>\n"
-"                <p>Por una parte, D. Serafín Quiles Coves, mayor de edad, con DNI nº 33.493.237-Q en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF nº ${object.company_id.partner_id.vat},</p>\n"
+"                <p>Por una parte, ${object.company_id.partner_manager_id.name}, mayor de edad, con DNI Nº ${object.company_id.partner_manager_id.vat} en nombre y representación de la Mercantil  ${object.company_id.name} con domicilio en ${object.company_id.street} y con CIF Nº ${object.company_id.partner_id.vat},</p>\n"
 "                <br/>\n"
-"                <p>Y por otra, D./Dª ${object.partner_id.name}, mayor de edad, con DNI nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios ………………………………………………..( en adelante LA COMUNIDAD)</p>\n"
+"                <p>Y por otra, ${object.partner_id.name}, mayor de edad, con DNI Nº ${object.partner_id.vat}. como Presidente de la Comunidad de Propietarios </p>\n"
 "                <p>Se reconocen mutuamente capacidad legal bastante para contratar y obligarse, formalizando la presente SUSPENSION DEL CONTRATO DE MANTENIMIENTO DE ASCENSOR, que se sujetará a cuanto determinen las siguientes estipulaciones, y a tal efecto:</p>\n"
 "                <strong><p>ACUERDAN:</p></strong>\n"
-"                <p>Primero.-Que la COMUNIDAD DE PROPIETARIOS y ${object.company_id.name} suscribieron con fecha _________ contrato de mantenimiento del ascensor Rae nº ${object.product_id.rae} sito en __________________________________ con una duración inicial de _________años.</p>\n"
-"                <p>Segundo.-Que mediante el presente escrito ambas partes acuerdan proceder con fecha de hoy y de mutuo acuerdo a su SUSPENSION  por periodo _____________________ , periodo en el que no se realizará mantenimiento ni reparación alguna al ascensor y en consecuencia  el cliente no deberá abonar el precio pactado,  quedando por tanto en suspenso el contrato y por ende todas las clausulas y acuerdos que constan en el mismo así como en los anexos que se hayan podido firmar vinculados a la prestación del servicio, por lo que ${object.company_id.name} no es responsable de lo que pueda suceder al ascensor en dicho periodo de suspensión.</p>\n"
+"                <p>Primero.-Que la COMUNIDAD DE PROPIETARIOS y ${object.company_id.name} suscribieron con fecha ${object.date_start} contrato de mantenimiento del ascensor RAE Nº ${object.product_id.rae} sito en __________________________________ con una duración inicial de _________años.</p>\n"
+"                <p>Segundo.-Que mediante el presente escrito ambas partes acuerdan proceder con fecha de hoy y de mutuo acuerdo a su SUSPENSION  por periodo  en el que no se realizará mantenimiento ni reparación alguna al ascensor y en consecuencia  el cliente no deberá abonar el precio pactado,  quedando por tanto en suspenso el contrato y por ende todas las clausulas y acuerdos que constan en el mismo así como en los anexos que se hayan podido firmar vinculados a la prestación del servicio, por lo que ${object.company_id.name} no es responsable de lo que pueda suceder al ascensor en dicho periodo de suspensión.</p>\n"
 "                <p>Y en prueba de conformidad a cuanto antecede, lo suscriben los interesados por duplicado y a un solo efecto, quedando un ejemplar en poder de cada parte y todo ello en el lugar y fecha a su principio indicados.</p>\n"
-"                <p></p>\n"
+"                <br/><br/>\n"
+"                <p>${object.company_id.name}</p>\n"
 "                 \n"
 "            "
 msgstr ""
@@ -168,7 +168,7 @@ msgid ""
 "                <br/>\n"
 "                <p>Estimados vecinos,</p>\n"
 "                <br></br>\n"
-"                <p>Recientemente hemos recibido la rescisión de contrato de mantenimiento del ascensor de su comunidad con nuestra compañía, que le comunico se hará efectiva con fecha 18 de Agosto de 2021. </p>\n"
+"                <p>Recientemente hemos recibido la rescisión de contrato de mantenimiento del ascensor de su comunidad con nuestra compañía, que le comunico se hará efectiva</p>\n"
 "                <p>Queremos mostrarles nuestro más sincero agradecimiento por la confianza que han depositado durante todo este tiempo en nuestra compañía. Ha sido para nosotros una satisfacción contribuir al buen funcionamiento y a la seguridad del ascensor del edificio. </p>\n"
 "                <strong>¡MUCHAS GRACIAS!</strong>\n"
 "                <p>Porque durante este tiempo de colaboración hemos podido contribuir al mantenimiento del empleo en la ciudad y  al desarrollo de planes de responsabilidad social que nos han permitido apoyar iniciativas dirigidas a los más desfavorecidos o a fomentar el deporte amateur, sobre todo entre los más jóvenes.</p>\n"
@@ -192,14 +192,14 @@ msgid ""
 "                <br/>\n"
 "                <p>Estimados vecinos,</p>\n"
 "                <br></br>\n"
-"                <p>Todo el equipo de ${object.company_id.name} queremos daros la bienvenida y aprovechar la oportunidad para agradeceros que hayan elegido nuestros servicios. Su confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro compromiso con su satisfacción, con la calidad y con su seguridad, aspectos en los que trabajamos sin descanso desde 2005.</p>\n"
+"                <p>Todo el equipo de ${object.company_id.name} queremos daros la bienvenida y aprovechar la oportunidad para agradeceros que hayan elegido nuestros servicios. Su confianza nos ayuda a ser cada día mejores profesionales y refuerza nuestro compromiso con su satisfacción, con la calidad y con su seguridad, aspectos en los que trabajamos sin descanso.</p>\n"
 "                <p>${object.company_id.name}</p>\n"
 "                <strong>¡MUCHAS GRACIAS!</strong>\n"
 "                <br></br>\n"
-"                <p>Si tienes cualquier tipo de duda, puedes llamarnos al 96 542 23 76 y le atenderemos las 24 horas. Os informamos que vuestro número de cliente es el [COD. CLIENTE]. Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta. </p>\n"
+"                <p>Si tienes cualquier tipo de duda, puedes llamarnos al ${object.company_id.phone} y le atenderemos las 24 horas. Os informamos que vuestro número de cliente es el ${object.partner_id.client_code}. Aunque no es necesario, es recomendable que nos lo facilitéis para agilizar cualquier consulta. </p>\n"
 "                <p>Además, nos encanta escuchar y aprender, por eso, si tienes alguna sugerencia para nosotros puedes enviárnosla a través del email ${object.company_id.email}</p>\n"
 "                <strong>¡Nos encanta recibir propuestas y mejorar con vosotros día a día!</strong>\n"
-"                <p>De nuevo queremos daros las gracias por la confianza depositada en todo nuestro equipo y daros la bienvenida a la  <strong> ${object.company_id.email}. </strong></p>\n"
+"                <p>De nuevo queremos daros las gracias por la confianza depositada en todo nuestro equipo y daros la bienvenida a la  <strong> ${object.company_id.name}. </strong></p>\n"
 "                <p>Nos vemos pronto,</p>\n"
 "                <p>${object.company_id.name}</p>\n"
 "                 \n"
@@ -207,8 +207,68 @@ msgid ""
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:mail.template,report_name:sat_companies_sale_suscription.email_welcome_contract_signature
+#: model:mail.template,report_name:sat_companies_sale_suscription.pdf_attachment_signatured_wel
+msgid "${(object.name or '').replace('/','_')}"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,subject:sat_companies_sale_suscription.email_welcome_contract_signature
+#: model:mail.template,subject:sat_companies_sale_suscription.pdf_attachment_signatured_wel
+msgid "${object.company_id.name}"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.actions.report,print_report_name:sat_companies_sale_suscription.action_welcome_email_contract_signature
+msgid "'Test correo de bienvenida - %s' % (object.name)"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "0000001"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,body_html:sat_companies_sale_suscription.email_welcome_contract_signature
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        \n"
+"                        <br/><br/>\n"
+"                       \n"
+"                        <br/><br/>\n"
+"                        \n"
+"                        <br/>\n"
+"                        <div style=\"margin:16px 0px 16px 0px;\">\n"
+"                                <a href=\"/welcome/${object.id}\" style=\"background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                    Signature\n"
+"                                </a>\n"
+"                        </div>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:mail.template,body_html:sat_companies_sale_suscription.pdf_attachment_signatured_wel
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        <br/>\n"
+"                        <div style=\"margin:16px 0px 16px 0px;\">\n"
+"                                <a href=\"/welcome/${object.id}\" style=\"background-color:#875A7B;padding: 20px 30px 20px 30px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                    Archivo Adjunto\n"
+"                                </a>\n"
+"                        </div>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid ""
+"<span>Seleccione una de las opciones para proceder con su firma:</span>"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
@@ -226,6 +286,7 @@ msgid "Action Needed"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__active
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__active
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__active
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__active
@@ -267,6 +328,11 @@ msgstr "Importes"
 #: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_extension
 #: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_extension_ir_actions_server
 msgid "Ampliación de contrato"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.custom_view_sale_subscription_search
+msgid "Aparato"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
@@ -317,6 +383,11 @@ msgid "Check Contract Type"
 msgstr "Tipo de contrato"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__check_signature
+msgid "Check signature"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_claim
 msgid "Claim"
 msgstr "Reclamación"
@@ -327,6 +398,23 @@ msgid "Claim date"
 msgstr "Fecha"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Clear File"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Clear Signature"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Close"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__stage_code
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__code
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_stage__stage_code
 msgid "Code"
 msgstr "Código"
@@ -379,6 +467,7 @@ msgstr "Tipo de suscripción"
 
 #. module: sat_companies_sale_suscription
 #: model:base.automation,name:sat_companies_sale_suscription.automatization_welcome_client
+#: model:ir.actions.report,name:sat_companies_sale_suscription.action_welcome_email_contract_signature
 #: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_welcome_client_ir_actions_server
 msgid "Correo de bienvenida"
 msgstr ""
@@ -398,6 +487,7 @@ msgstr "Crear nuevo registro"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__create_uid
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__create_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__create_uid
@@ -407,12 +497,18 @@ msgstr "Creado por"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__create_date
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__create_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__create_date
 msgid "Created on"
 msgstr "Creado en"
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Data URL for your signature will go here!"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__date
@@ -506,6 +602,7 @@ msgstr "Suspensión"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log__display_name
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_stage__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__display_name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__display_name
@@ -516,9 +613,19 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Draw"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__recurring_rule_boundary
 msgid "Duration"
 msgstr "Duración"
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "E-Signature"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__email
@@ -526,8 +633,18 @@ msgid "Email"
 msgstr "Correo"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.sale_subscription_inherit_form
+msgid "Email welcome"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_embargo
 msgid "Embargo"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__show_technical
+msgid "Enable technical"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
@@ -536,7 +653,7 @@ msgid "End payment"
 msgstr "F.Fin pago"
 
 #. module: sat_companies_sale_suscription
-#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__exclude_months
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__exclude_months
 msgid "Exlude Months"
 msgstr "Excluir meses"
 
@@ -573,6 +690,11 @@ msgid "Followers (Partners)"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.sale_subscription_inherit_form
+msgid "Free Months"
+msgstr "Excluir meses"
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__gadgest_contract_type_id
 msgid "Gadgest Contract Type"
 msgstr "Tipo contrato"
@@ -604,6 +726,11 @@ msgid "General dates 2"
 msgstr "Datos generales 2"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Get a better browser, bro."
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_company__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_res_partner_bank__id
@@ -612,6 +739,7 @@ msgstr "Datos generales 2"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log__id
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_stage__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__id
@@ -713,6 +841,11 @@ msgid "Is failure"
 msgstr "Fallo"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_order_template__is_maintenance
+msgid "Is maintenance"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__is_settlement
 msgid "Is settlement"
 msgstr "Liquidación"
@@ -746,6 +879,7 @@ msgstr "Junio"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_log____last_update
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_stage____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template____last_update
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount____last_update
@@ -757,6 +891,7 @@ msgstr "Última modificación el"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__write_uid
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__write_uid
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__write_uid
@@ -766,6 +901,7 @@ msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__write_date
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__write_date
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__write_date
@@ -842,6 +978,7 @@ msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__name
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__name
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__name
@@ -957,6 +1094,11 @@ msgid "PDF Contrato"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__pdf_file_welcome
+msgid "PDF file welcome"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__partner_id
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "Partner"
@@ -1016,6 +1158,11 @@ msgid "Quotation Template"
 msgstr "Plantilla de presupuesto"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "REF"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.actions.act_window,name:sat_companies_sale_suscription.action_view_reason_change
 #: model:ir.model,name:sat_companies_sale_suscription.model_subscription_reason_change
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__reason_change_id
@@ -1027,6 +1174,16 @@ msgstr "Motivo cambio"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__reception_date
 msgid "Reception date"
 msgstr "Fec.Recepción"
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Report"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.report_contract_sale
+msgid "Report title"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_has_sms_error
@@ -1043,6 +1200,11 @@ msgid "SUBA SU ARCHIVO"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_month__sale_subscription_id
+msgid "Sale Subscription"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__sale_type_id
 msgid "Sale Type"
 msgstr "Tipo presupuesto/OT"
@@ -1051,12 +1213,17 @@ msgstr "Tipo presupuesto/OT"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_order_template__sale_type_id
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__sale_type_id
 msgid "Sale type"
-msgstr "Tipo presupuesto/OT"
+msgstr "Tipo de presupuesto/OT"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_order
 msgid "Sales Order"
 msgstr "Pedido de venta"
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Send Document signatured"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__sentence_date
@@ -1084,9 +1251,19 @@ msgid "Settlement date"
 msgstr "Fecha de liquidación"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Sign in the canvas below"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__signature
 msgid "Signature"
 msgstr "Firma"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__signature_url_text
+msgid "Signature URL"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,help:sat_companies_sale_suscription.field_sale_subscription__signature
@@ -1115,6 +1292,16 @@ msgid "State"
 msgstr "Provincia"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Submit File"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Submit Signature"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_subscription
 msgid "Subscription"
 msgstr "Suscripción"
@@ -1123,6 +1310,11 @@ msgstr "Suscripción"
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_subscription_log
 msgid "Subscription Log"
 msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription__subscription_month_ids
+msgid "Subscription Month"
+msgstr "Meses"
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model,name:sat_companies_sale_suscription.model_sale_subscription_stage
@@ -1141,6 +1333,12 @@ msgid "Subscription type"
 msgstr "Tipo de suscripción"
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.report_contract_sale
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Suscripción"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:base.automation,name:sat_companies_sale_suscription.automatization_sat_companies_suspension
 #: model:ir.actions.server,name:sat_companies_sale_suscription.automatization_sat_companies_suspension_ir_actions_server
 msgid "Suspensión de contrato"
@@ -1155,6 +1353,16 @@ msgstr "Técnico"
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__telephone
 msgid "Telephone"
 msgstr "Teléfono"
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "The signed contract has been sent."
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "This is a preview of the customer portal."
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__compensation_total
@@ -1178,6 +1386,12 @@ msgid "Type of contract"
 msgstr "tipo de contrato"
 
 #. module: sat_companies_sale_suscription
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_order_template__udn_id
+#: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_template__udn_id
+msgid "Udn"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_sale_subscription_demand__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_demand_amount__message_unread
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_inspection_report__message_unread
@@ -1193,6 +1407,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_process__message_unread_counter
 #: model:ir.model.fields,field_description:sat_companies_sale_suscription.field_subscription_reason_change__message_unread_counter
 msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Upload File"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
@@ -1220,6 +1439,11 @@ msgid "Website communication history"
 msgstr ""
 
 #. module: sat_companies_sale_suscription
+#: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.welcome_subscription_report
+msgid "Well done!"
+msgstr ""
+
+#. module: sat_companies_sale_suscription
 #: model:ir.model.fields.selection,name:sat_companies_sale_suscription.selection__sale_subscription_template__contract_recurring_rule__years
 msgid "Years"
 msgstr ""
@@ -1228,6 +1452,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sat_companies_sale_suscription.view_sale_subscription_demand_form
 msgid "amount"
 msgstr "Importe"
+
+#. module: sat_companies_sale_suscription
+#: model:ir.model,name:sat_companies_sale_suscription.model_sale_subscription_month
+msgid "sale.subscription.month"
+msgstr ""
 
 #. module: sat_companies_sale_suscription
 #: model:mail.template,subject:sat_companies_sale_suscription.template_send_email_fired_template
