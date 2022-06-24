@@ -12,6 +12,12 @@ class SaleOrderTemplateInherit(models.Model):
         string="Acc number")
     check_contract_type = fields.Boolean(
         compute="_compute_check_contract_type")
+    
+    exclude_months = fields.Boolean(
+        'Exlude Months')
+
+    subscription_month_ids = fields.Many2many(
+        'sale.subscription.month')
 
 
     def _compute_check_contract_type(self):
@@ -57,7 +63,10 @@ class SaleOrderTemplateInherit(models.Model):
                                 'task_user_id': order.task_user_id.id,
                                 'gadgest_contract_type_id': order.gadgets_contract_type_id.id,
                                 'date_begin': order.date_begin,
-                                'date_end': order.date_end
+                                'date_end': order.date_end,
+                                'subscription_month_ids': order.subscription_month_ids.ids,
+                                'exclude_months': order.exclude_months
+
                             })
                             values['recurring_invoice_line_ids'] = to_create[template]._prepare_subscription_line_data()
                             subscription = self.env['sale.subscription'].sudo().create(values)
