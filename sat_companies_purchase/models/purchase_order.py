@@ -1,6 +1,5 @@
 from odoo import models, fields, api, _
 from datetime import datetime, date
-import logging
 
 
 class PurchaseOrder(models.Model):
@@ -29,8 +28,9 @@ class PurchaseOrder(models.Model):
             else:
                 record.is_validate_reception = False
 
-
-    @api.onchange('date_planned','is_validate_reception')
+    @api.onchange(
+        'date_planned',
+        'is_validate_reception')
     def _onchage_validate_reception(self):
         for record in self:
             if record.is_validate_reception:

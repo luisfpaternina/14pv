@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-30 18:36+0000\n"
-"PO-Revision-Date: 2022-05-30 18:36+0000\n"
+"POT-Creation-Date: 2022-06-21 16:40+0000\n"
+"PO-Revision-Date: 2022-06-21 16:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1305,8 +1305,8 @@ msgstr "Tipo aumento"
 
 #. module: sat_companies_stock
 #: model_terms:ir.ui.view,arch_db:sat_companies_stock.view_account_move_inherit_product
-msgid "Information project"
-msgstr "Información contrato"
+msgid "Información presupuesto/OT"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__years_inspection
@@ -1425,6 +1425,12 @@ msgstr "Freno operador"
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_gadgets__is_priority
 msgid "Is priority"
 msgstr "Prioritario"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_used
+#: model:ir.model.fields,field_description:sat_companies_stock.field_product_template__is_used
+msgid "Is used"
+msgstr "Usado"
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_product_product__is_wedging_cabin
@@ -2539,6 +2545,13 @@ msgstr "Tipo de asistencia"
 #: model:ir.ui.menu,name:sat_companies_stock.menu_stock_types_cabin_tubes
 msgid "Types cabin tubes"
 msgstr "Tipos tubos cabina"
+
+#. module: sat_companies_stock
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_bank_statement_line__udn_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_move__udn_type_id
+#: model:ir.model.fields,field_description:sat_companies_stock.field_account_payment__udn_type_id
+msgid "Udn"
+msgstr ""
 
 #. module: sat_companies_stock
 #: model:ir.model.fields,field_description:sat_companies_stock.field_stock_bench__message_unread

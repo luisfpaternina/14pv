@@ -10,7 +10,7 @@
                 <field name="rae" attrs="{'invisible': [('is_gadget', '!=', True)]}"/>
                 <field name="has_rae" invisible="1"/>
             </xpath>
-         
+
             <xpath expr="//form[@name='Product Template']/sheet[1]/notebook[1]" position="inside">
                 <page string="Gadget" name="page_gadgets"  attrs="{'invisible': [('is_gadget', '!=', True)]}">
                   <group name="group_gadget_principal">
@@ -307,6 +307,17 @@
                 </div>
             </xpath>
 
+            <xpath expr="//form/sheet/div[2]/div[1]/div[2]" position="after">
+                <div>
+                    <field name="is_used"/>
+                    <label for="is_used"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//sheet" position="before">
+                <widget name="web_ribbon" text="Is used" attrs="{'invisible': [('is_used', '!=', True)]}"/>
+            </xpath>
+
             <xpath expr="//field[@name='purchase_ok']" position="attributes">
                 <attribute name="attrs">{"invisible": [["is_gadget","=",True]]}</attribute>
             </xpath>
@@ -360,5 +371,25 @@
 
             </field>
     </record>
+
+    <!--HEREDAR VISTA KANBAN DE PRODUCTOS-->
+    <record id="inherit_view_kanban_product_template_only_form_view_sat" model="ir.ui.view">
+        <field name="name">product.template.form.</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//kanban[1]/templates[1]/t[1]/div[1]/div[2]/strong[1]/field[@name='name']" position="after">
+                <div class="kanban-ribbon"><p attrs="{'invisible': [('is_used', '!=', True)]}">Is used</p></div>
+            </xpath>
+
+            <xpath expr="//t[@t-name='kanban-box']//div[contains(@class, 'oe_kanban_details')]" position="inside">
+                <div class="kanban-ribbon">
+                    <field name="is_used"/>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
      
-</odoo>     
+</odoo>

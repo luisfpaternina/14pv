@@ -470,6 +470,8 @@ class ProductTemplate(models.Model):
         string="There are keys")
     number_of_tubes = fields.Char(
         string="Number of tubes")
+    is_used = fields.Boolean(
+        string="Is used")
     
     @api.depends('is_gadget')
     def compute_rae(self):
